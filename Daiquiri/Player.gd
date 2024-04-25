@@ -4,11 +4,15 @@ var mouse_sensitivity := 0.001
 var twist_input := 0.0
 var pitch_input := 0.0
 
+@onready var crosshair = %Crosshair
+
 @onready var twist_pivot := $TwistPivot
 @onready var pitch_pivot := $TwistPivot/PitchPivot
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	crosshair.position.x = get_viewport().size.x / 2 - 32
+	crosshair.position.y = get_viewport().size.y / 2 - 32
 
 func _process(delta: float) -> void:
 	var input := Vector3.ZERO

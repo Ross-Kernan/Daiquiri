@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://biisrdlpli06o"]
+
+[ext_resource type="ArrayMesh" uid="uid://dv0kusxlexvc4" path="res://Daiquiri/Models/OBJ format/blasterB.obj" id="1_ou348"]
+
+[node name="Gun" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_ou348")
