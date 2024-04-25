@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bopsk0li6arig"]
+[gd_scene load_steps=7 format=3 uid="uid://bopsk0li6arig"]
+
+[ext_resource type="PackedScene" uid="uid://djdqw4uivu8y4" path="res://Daiquiri/player.tscn" id="1_4elbi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u4ybk"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -16,6 +18,9 @@ glow_enabled = true
 [sub_resource type="PlaneMesh" id="PlaneMesh_ybrsr"]
 size = Vector2(10, 10)
 
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_lwebq"]
+data = PackedVector3Array(5, 0, 5, -5, 0, 5, 5, 0, -5, -5, 0, 5, -5, 0, -5, 5, 0, -5)
+
 [node name="Node3D" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -25,8 +30,15 @@ environment = SubResource("Environment_e0eaw")
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_ybrsr")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_lwebq")
+
+[node name="Player" parent="." instance=ExtResource("1_4elbi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -2)
+top_level = true
+linear_damp = 3.0
