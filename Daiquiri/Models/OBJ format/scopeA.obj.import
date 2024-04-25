@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cxy6upoogdbf5"
+path="res://.godot/imported/scopeA.obj-dd056964a9869f3531fe1b68cdf94179.mesh"
+
+[deps]
+
+files=["res://.godot/imported/scopeA.obj-dd056964a9869f3531fe1b68cdf94179.mesh"]
+
+source_file="res://Daiquiri/Models/OBJ format/scopeA.obj"
+dest_files=["res://.godot/imported/scopeA.obj-dd056964a9869f3531fe1b68cdf94179.mesh", "res://.godot/imported/scopeA.obj-dd056964a9869f3531fe1b68cdf94179.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

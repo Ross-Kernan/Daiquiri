@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d3vtkb02h3gsv"
+path="res://.godot/imported/blasterM.obj-461a4b75b5b4dbacef2a7d0c1c7cac3b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/blasterM.obj-461a4b75b5b4dbacef2a7d0c1c7cac3b.mesh"]
+
+source_file="res://Daiquiri/Models/OBJ format/blasterM.obj"
+dest_files=["res://.godot/imported/blasterM.obj-461a4b75b5b4dbacef2a7d0c1c7cac3b.mesh", "res://.godot/imported/blasterM.obj-461a4b75b5b4dbacef2a7d0c1c7cac3b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
